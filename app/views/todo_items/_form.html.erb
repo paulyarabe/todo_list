@@ -1,4 +1,7 @@
-<%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
-<%= f.text_field :content, placeholder: "New Todo" %>
-<%= f.submit %>
+
+<%= simple_form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
+  <%= f.input :content, placeholder: "New Todo" %>
+  <%= f.submit 'Create Todo Item', class: 'btn btn-danger' %>
 <% end %>
+
+
